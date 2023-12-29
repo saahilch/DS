@@ -1,0 +1,44 @@
+
+
+public class Binary {
+/*First We Get Seperate Functkion passing array & left right & mid parameters 
+ 1st checks if right is greter or equal to 1 if these is true then 
+ find mid  then check mid is exact equal to mid or not then retun  mid
+ then again check mid itself if element is smaller than mid thne it is oresent at left side
+ else element is present at right side  */
+	public int binarySerch(int arr[], int l, int r, int m) {
+		if (r >= l) {
+			int mid = l + (r - 1) / 2;
+/*if element is greter than mid then condition is false then counter 
+ * will get out from array */
+			if (arr[mid] == m)
+
+				return mid;
+			if (arr[mid] > m)
+
+				return binarySerch(arr, l, mid - 1, m);
+			return binarySerch(arr,mid + 1,r, m);
+
+		}
+
+		return -1;
+
+	}
+
+	public static void main(String[] args) {
+		/*calling class here to perform copy of operations on it
+		 then pass array with variables then that array we find 
+		 element is  present or not  */
+		Binary ob = new Binary();
+		int arr[] = { 2, 3, 4, 10, 40,50,70,20 };
+		int n = arr.length;
+		int m =50 ;
+		int result = ob.binarySerch(arr, 0, n-1, m);
+		if (result == -1) {
+			System.out.println("Not present");
+		} else {
+			System.out.println("Prsent At Index"+result);
+		}
+
+	}
+}

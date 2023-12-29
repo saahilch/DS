@@ -1,0 +1,35 @@
+
+
+public class Binary {
+	public int binarySerch(int arr[], int l, int r, int m) {
+		if (r >= l) {
+			int mid = l + (r - 1) / 2;
+
+			if (arr[mid] == m)
+
+				return mid;
+			if (arr[mid] > m)
+
+				return binarySerch(arr, l, mid - 1, m);
+			//return binarySerch(arr, mid + 1, m);
+
+		}
+
+		return -1;
+
+	}
+
+	public static void main(String[] args) {
+		Binary ob = new Binary();
+		int arr[] = { 2, 5, 8, 12, 16, 23, 38, 56, 72, 91 };
+		int n = arr.length;
+		int m =20 ;
+		int result = ob.binarySerch(arr, 0, n-1, m);
+		if (result == -1) {
+			System.out.println("Not present");
+		} else {
+			System.out.println("Prsent");
+		}
+
+	}
+}

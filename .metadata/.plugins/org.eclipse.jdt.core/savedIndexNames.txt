@@ -1,0 +1,16 @@
+INDEX VERSION 1.131+D:\DS Assig\.metadata\.plugins\org.eclipse.jdt.core
+12450494.index
+2995834453.index
+3917152419.index
+2787367218.index
+3645743808.index
+1602128660.index
+1615116574.index
+1865797976.index
+4045443062.index
+2361772636.index
+1596135666.index
+3939177996.index
+2442077309.index
+1701007616.index
+941724178.index
